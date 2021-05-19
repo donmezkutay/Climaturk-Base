@@ -35,7 +35,7 @@ from Hodograph import hodograph
 from Skewt import skewt
 from Precipitation_Compact_Maps import Compact_precipitation
 
-DateList = np.load('DateList_Precipitation_10042021.npy', allow_pickle=True)
+DateList = np.load('../DateList_Precipitation_10042021.npy', allow_pickle=True)
 
 # Define the path
 #storm klasörüne geçiş yap
@@ -91,7 +91,7 @@ for count in range(len(DateList)):
     # change 0 to 1 in corresponding plot's [done] column (means the plot is completed in plotting)
     DateList[count, 2] = 1
     os.chdir(r'C:\Users\USER\JupyterLab\Climaturk_Site\GITHUB\version_17_05_2021\Climaturk-Base\development')
-    np.save('DateList_Precipitation_10042021', DateList)
+    np.save('../DateList_Precipitation_10042021', DateList)
     print('Plot Done: \n\n', str(DateList[count, 0]))
     
     

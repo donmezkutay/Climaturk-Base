@@ -4,6 +4,8 @@
 import scipy.constants as sc
 import xarray as xr
 import numpy as np
+from pydap.client import open_url
+from pydap.cas.urs import setup_session
 from datetime import datetime, timedelta
 from dask.distributed import Client
 import matplotlib.pyplot as plt
@@ -22,8 +24,11 @@ import proplot as plot
 import os
 import cartopy.crs as ccrs
 import Compact_Maps
+from OpenThermodynamicData import opendownloadeddata
+from Hodograph import hodograph
+from Skewt import skewt
 
-DateList = np.load('DateList_Synoptic_10042021.npy', allow_pickle=True)
+DateList = np.load('../DateList_Thermodynamic_10042021.npy', allow_pickle=True)
 
 # Define the path
 #storm klasörüne geçiş yap
@@ -36,33 +41,26 @@ for count in range(len(DateList)):
 
     dates = str(DateList[count, 0])
     #dates_s =  str(DateList[count, 1])
-
-    pre_data_path = r'C:\Users\USER\JupyterLab\Climaturk_Site\Docs\STORM_DATA'
-    full_path_pr = pre_data_path + '\\' + dates + '\\' + 'pressure_data.nc'
-    full_path_sn = pre_data_path + '\\' + dates + '\\' + 'single_data.nc'
     
     #storm için yeni data klasörü oluştur
-    os.chdir(r'C:\Users\USER\JupyterLab\Climaturk_Site\Docs\STORMS')
+    os.chdir(r'C:\Users\USER\JupyterLab\Climaturk_Site\Codes\SkewT_Pictures')
     try:
         os.mkdir('{}'.format(str(DateList[count, 0])))
     except:
         print('Directory exists')
+    
+    # open data
+    df, coordinate_pairs = opendownloadeddata(dates)
+    
+    #plot
+    cmap = plot.Colormap(
+    'mono_r', name='SciVisColor', )
 
-    pressure_data = xr.open_dataset(full_path_pr).sel(latitude = slice(44,35), longitude = slice(25,46))
-    single_data = xr.open_dataset(full_path_sn).sel(latitude = slice(44,35), longitude = slice(25,46))
-
-    plotting = Compact_Maps.Compact_plot(pressure_data, single_data, dates)
-
-    plotting.Compact_250mb_wind_streamlines()
-    plotting.Compact_2m_dew_mslp()
-    plotting.Compact_2m_temp_mslp()
-    plotting.Compact_500mb_vort_height()
-    plotting.Compact_700mb_temp_height_spehum()
-    plotting.Compact_700mb_vvel_streamlines()
-    plotting.Compact_850mb_temp_height()
-    plotting.Compact_cape_mslp_10mstreamlines()
+    hodograph(df, coordinate_pairs, cmap, dates,)
+    skewt(df, coordinate_pairs, cmap, dates,)
     
     # change 0 to 1 in corresponding plot's [done] column (means the plot is completed in plotting)
     DateList[count, 3] = 1
-    np.save('DateList_Synoptic_10042021', DateList)
+    np.save('../DateList_Thermodynamic_10042021', DateList)
     print('Plot Done: ', str(DateList[count, 0]))
+    
