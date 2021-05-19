@@ -7,7 +7,7 @@ import pandas as pd
 import numpy as np
 
 # First we need to define the date
-DateList = np.load('DateList_Thermodynamic_10042021.npy', allow_pickle=True)
+DateList = np.load('../DateList_Thermodynamic_10042021.npy', allow_pickle=True)
 
 # dimensions: (dates, dates_s, synoptic_done, thermodynamic_done)
 # split the data with respect to year,month and day
@@ -96,4 +96,4 @@ for count in range(len(years)):
     
     # change 0 to 1 in corresponding date's [done] column (means the date is completed in downloading)
     DateList[count, 2] = 1
-    np.save('DateList_Thermodynamic_10042021', DateList)
+    np.save('../DateList_Thermodynamic_10042021', DateList)
