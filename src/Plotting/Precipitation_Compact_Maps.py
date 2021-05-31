@@ -164,7 +164,7 @@ def Compact_precipitation(data, source, dates):
     title_climaturk.set_path_effects([PathEffects.withStroke(linewidth=2, foreground='k')])
             
     #save figure
-    plt.savefig(r'C:\Users\USER\JupyterLab\Climaturk_Site\Docs\STORMS\precipitation\{}\{}.jpeg'.format(dates, source),
+    plt.savefig(r'D:\JupyterLab\Climaturk_Site\Docs\STORMS\precipitation\{}\{}.jpeg'.format(dates, source),
                     bbox_inches='tight', optimize=True, progressive=True, dpi=150,
                     )  
     plt.close()

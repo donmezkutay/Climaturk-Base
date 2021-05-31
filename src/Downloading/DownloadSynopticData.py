@@ -7,7 +7,7 @@ import numpy as np
 
 
 # First we need to define the date
-DateList = np.load('../DateList_Synoptic_10042021.npy', allow_pickle=True)
+DateList = np.load(r'C:\Users\USER\JupyterLab\Climaturk_Site\GITHUB\version_17_05_2021\Climaturk-Base\src/DateList_Synoptic_10042021.npy', allow_pickle=True)
 
 # split the data with respect to year,month and day
 years = [str(i)[:4] for i in DateList[0:,0]]
@@ -38,7 +38,7 @@ for count in range(len(years)):
     if DateList[count, 2] == 1: continue
         
     # -------------------------------------DATA PATH-----------------------------------------------------
-    pre_data_path = r'C:\Users\USER\JupyterLab\Climaturk_Site\Docs\STORM_DATA'
+    pre_data_path = r'D:\JupyterLab\Climaturk_Site\Docs\STORM_DATA'
     os.chdir(pre_data_path)
 
     #storm için yeni data klasörü oluştur
@@ -84,4 +84,4 @@ for count in range(len(years)):
     
     # change 0 to 1 in corresponding date's [done] column (means the date is completed in downloading)
     DateList[count, 2] = 1
-    np.save('../DateList_Synoptic_10042021', DateList)
+    np.save(r'C:\Users\USER\JupyterLab\Climaturk_Site\GITHUB\version_17_05_2021\Climaturk-Base\src/DateList_Synoptic_10042021', DateList)

@@ -20,7 +20,7 @@ from metpy.plots import Hodograph
 import matplotlib.patheffects as pe
 
 def hodograph(df, coordinate_pairs, cmap, dates,):
-    os.chdir(r'C:\Users\USER\JupyterLab\Climaturk_Site\Codes\SkewT_Pictures')
+    os.chdir(r'D:\JupyterLab\Climaturk_Site\Codes\SkewT_Pictures')
     for sehir_id in coordinate_pairs.keys():
         pressure = df['level'].values * units.hectopascal
         t_tempor = df['t'].sel(latitude = coordinate_pairs[sehir_id][0], longitude = coordinate_pairs[sehir_id][1], method='nearest')
@@ -66,4 +66,4 @@ def hodograph(df, coordinate_pairs, cmap, dates,):
         plt.savefig('hodograph\{}.png'.format(sehir_id), bbox_inches='tight', dpi = 150)
         plt.close()
         
-        os.chdir(r'C:\Users\USER\JupyterLab\Climaturk_Site\Codes\SkewT_Pictures')
+        os.chdir(r'D:\JupyterLab\Climaturk_Site\Codes\SkewT_Pictures')
