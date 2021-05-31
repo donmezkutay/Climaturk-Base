@@ -28,7 +28,7 @@ from OpenThermodynamicData import opendownloadeddata
 from Hodograph import hodograph
 from Skewt import skewt
 
-DateList = np.load('../DateList_Thermodynamic_10042021.npy', allow_pickle=True)
+DateList = np.load(r'C:\Users\USER\JupyterLab\Climaturk_Site\GITHUB\version_17_05_2021\Climaturk-Base\src/DateList_Thermodynamic_10042021.npy', allow_pickle=True)
 
 # Define the path
 #storm klasörüne geçiş yap
@@ -43,7 +43,7 @@ for count in range(len(DateList)):
     #dates_s =  str(DateList[count, 1])
     
     #storm için yeni data klasörü oluştur
-    os.chdir(r'C:\Users\USER\JupyterLab\Climaturk_Site\Codes\SkewT_Pictures')
+    os.chdir(r'D:\JupyterLab\Climaturk_Site\Codes\SkewT_Pictures')
     try:
         os.mkdir('{}'.format(str(DateList[count, 0])))
     except:
@@ -61,6 +61,6 @@ for count in range(len(DateList)):
     
     # change 0 to 1 in corresponding plot's [done] column (means the plot is completed in plotting)
     DateList[count, 3] = 1
-    np.save('../DateList_Thermodynamic_10042021', DateList)
+    np.save(r'C:\Users\USER\JupyterLab\Climaturk_Site\GITHUB\version_17_05_2021\Climaturk-Base\src/DateList_Thermodynamic_10042021', DateList)
     print('Plot Done: ', str(DateList[count, 0]))
     

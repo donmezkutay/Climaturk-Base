@@ -127,7 +127,7 @@ class Compact_plot():
             self.ax_title(ax, i)
             
             #save figure
-        plt.savefig(r'C:\Users\USER\JupyterLab\Climaturk_Site\Docs\STORMS\{}\500mb_vort_height.jpeg'.format(self.dates, ),
+        plt.savefig(r'D:\JupyterLab\Climaturk_Site\Docs\STORMS\{}\500mb_vort_height.jpeg'.format(self.dates, ),
                         bbox_inches='tight', optimize=True, progressive=True, dpi=150,
                         )
         plt.close()
@@ -178,7 +178,7 @@ class Compact_plot():
             
             
         #save figure
-        plt.savefig(r'C:\Users\USER\JupyterLab\Climaturk_Site\Docs\STORMS\{}\850mb_temp_height.jpeg'.format(self.dates, ),
+        plt.savefig(r'D:\JupyterLab\Climaturk_Site\Docs\STORMS\{}\850mb_temp_height.jpeg'.format(self.dates, ),
                         bbox_inches='tight', optimize=True, progressive=True, dpi=150,
                         )
         plt.close()
@@ -221,7 +221,7 @@ class Compact_plot():
             self.ax_title(ax, i)
             
          #save figure
-        plt.savefig(r'C:\Users\USER\JupyterLab\Climaturk_Site\Docs\STORMS\{}\700mb_vvel_streamline.jpeg'.format(self.dates, ),
+        plt.savefig(r'D:\JupyterLab\Climaturk_Site\Docs\STORMS\{}\700mb_vvel_streamline.jpeg'.format(self.dates, ),
             bbox_inches='tight', optimize=True, progressive=True, dpi=150,
             )
         plt.close()
@@ -275,7 +275,7 @@ class Compact_plot():
             self.ax_title(ax, i)
             
         #save figure
-        plt.savefig(r'C:\Users\USER\JupyterLab\Climaturk_Site\Docs\STORMS\{}\250mb_wind_height.jpeg'.format(self.dates, ),
+        plt.savefig(r'D:\JupyterLab\Climaturk_Site\Docs\STORMS\{}\250mb_wind_height.jpeg'.format(self.dates, ),
             bbox_inches='tight', optimize=True, progressive=True, dpi=200,
             ) 
         plt.close()
@@ -326,7 +326,7 @@ class Compact_plot():
             
             
         #save figure
-        plt.savefig(r'C:\Users\USER\JupyterLab\Climaturk_Site\Docs\STORMS\{}\2mtemp_mslp.jpeg'.format(self.dates, ),
+        plt.savefig(r'D:\JupyterLab\Climaturk_Site\Docs\STORMS\{}\2mtemp_mslp.jpeg'.format(self.dates, ),
                     bbox_inches='tight', optimize=True, progressive=True, dpi=150,
                     )  
         plt.close()
@@ -376,7 +376,7 @@ class Compact_plot():
             self.ax_title(ax, i)
             
         #save figure
-        plt.savefig(r'C:\Users\USER\JupyterLab\Climaturk_Site\Docs\STORMS\{}\dewpoint_2m.jpeg'.format(self.dates, ),
+        plt.savefig(r'D:\JupyterLab\Climaturk_Site\Docs\STORMS\{}\dewpoint_2m.jpeg'.format(self.dates, ),
                     bbox_inches='tight', optimize=True, progressive=True, dpi=150,
                     )
         plt.close()
@@ -434,7 +434,7 @@ class Compact_plot():
             self.ax_title(ax, i)
             
         #save figure
-        plt.savefig(r'C:\Users\USER\JupyterLab\Climaturk_Site\Docs\STORMS\{}\700mb_temp_spehum_height.jpeg'.format(self.dates, ),
+        plt.savefig(r'D:\JupyterLab\Climaturk_Site\Docs\STORMS\{}\700mb_temp_spehum_height.jpeg'.format(self.dates, ),
                     bbox_inches='tight', optimize=True, progressive=True, dpi=150,
                     )
         plt.close()
@@ -484,7 +484,7 @@ class Compact_plot():
             self.ax_title(ax, i)
             
         #save figure
-        plt.savefig(r'C:\Users\USER\JupyterLab\Climaturk_Site\Docs\STORMS\{}\cape_10mstreamlines.jpeg'.format(self.dates, ),
+        plt.savefig(r'D:\JupyterLab\Climaturk_Site\Docs\STORMS\{}\cape_10mstreamlines.jpeg'.format(self.dates, ),
                     bbox_inches='tight', optimize=True, progressive=True, dpi=150,
                     )
         plt.close()

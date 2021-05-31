@@ -20,7 +20,7 @@ from metpy.plots import Hodograph
 import matplotlib.patheffects as pe
 
 def opendownloadeddata(dates, ):
-    df = xr.open_dataset(r'C:\Users\USER\JupyterLab\Climaturk_Site\Docs\STORM_DATA\{}\thermodynamic_data.nc'.format(dates))
+    df = xr.open_dataset(r'D:\JupyterLab\Climaturk_Site\Docs\STORM_DATA\{}\thermodynamic_data.nc'.format(dates))
 
     # veri çevir
     #Proper Units for pressure level data

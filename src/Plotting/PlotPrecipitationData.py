@@ -35,7 +35,7 @@ from Hodograph import hodograph
 from Skewt import skewt
 from Precipitation_Compact_Maps import Compact_precipitation
 
-DateList = np.load('../DateList_Precipitation_10042021.npy', allow_pickle=True)
+DateList = np.load(r'C:\Users\USER\JupyterLab\Climaturk_Site\GITHUB\version_17_05_2021\Climaturk-Base\src/DateList_Precipitation_10042021.npy', allow_pickle=True)
 
 # Define the path
 #storm klasörüne geçiş yap
@@ -55,14 +55,14 @@ for count in range(len(DateList)):
     datetime_object = datetime(year, month, day)
     
     # data paths
-    pre_data_path = r'C:\Users\USER\JupyterLab\Climaturk_Site\Docs\STORM_DATA\precipitation'
+    pre_data_path = r'D:\JupyterLab\Climaturk_Site\Docs\STORM_DATA\precipitation'
     full_path_era5 = pre_data_path + '\\' + 'DAILY_ERA5' + '\\' + 'DAILY_ERA5.nc'
     full_path_merra2 = pre_data_path + '\\' + 'DAILY_MERRA2' + '\\' + 'DAILY_MERRA2.nc'
     full_path_jra55 = pre_data_path + '\\' + 'DAILY_JRA55' + '\\' + 'DAILY_JRA55.nc'
     full_path_cfsr_cfsv2 = pre_data_path + '\\' + 'DAILY_CFSR_CFSV2' + '\\' + 'DAILY_CFSR_CFSV2.nc'
     
     #storm için yeni data klasörü oluştur
-    os.chdir(r'C:\Users\USER\JupyterLab\Climaturk_Site\Docs\STORMS\precipitation')
+    os.chdir(r'D:\JupyterLab\Climaturk_Site\Docs\STORMS\precipitation')
     try:
         os.mkdir('{}'.format(str(DateList[count, 0])))
     except:
@@ -90,8 +90,8 @@ for count in range(len(DateList)):
     
     # change 0 to 1 in corresponding plot's [done] column (means the plot is completed in plotting)
     DateList[count, 2] = 1
-    os.chdir(r'C:\Users\USER\JupyterLab\Climaturk_Site\GITHUB\version_17_05_2021\Climaturk-Base\development')
-    np.save('../DateList_Precipitation_10042021', DateList)
+    os.chdir(r'C:\Users\USER\JupyterLab\Climaturk_Site\GITHUB\version_17_05_2021\Climaturk-Base\src')
+    np.save(r'C:\Users\USER\JupyterLab\Climaturk_Site\GITHUB\version_17_05_2021\Climaturk-Base\src\DateList_Precipitation_10042021', DateList)
     print('Plot Done: \n\n', str(DateList[count, 0]))
     
     
