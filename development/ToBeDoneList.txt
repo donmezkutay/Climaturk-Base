@@ -1,0 +1,6 @@
+1-CLIMATURK'TE SOL TARAFIN GÜNCELLENMESİ
+
+    +İlk olarak tarih seçilecek ortak alandan
+    +Tarih seçilince değişken seçicek
+    +daha sonra time series ya da 3d plot seçicek
+    +en son plot adını seçicek o gün ile ilgili
