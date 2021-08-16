@@ -1,6 +1,11 @@
-1-CLIMATURK'TE SOL TARAFIN GÜNCELLENMESİ
+1-CLIMATURK'TE SOL TARAFIN GÜNCELLENMESİ == DONE on 16.08.2021
 
     +İlk olarak tarih seçilecek ortak alandan
     +Tarih seçilince değişken seçicek
     +daha sonra time series ya da 3d plot seçicek
     +en son plot adını seçicek o gün ile ilgili
+    
+    DONE..
+    ------------------------------------------------------------
+    
+2-PREPARE DOCSTRINGS FOR FUNCTIONS
