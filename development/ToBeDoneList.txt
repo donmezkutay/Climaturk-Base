@@ -9,3 +9,5 @@
     ------------------------------------------------------------
     
 2-PREPARE DOCSTRINGS FOR FUNCTIONS
+
+3-Add Climaturk.com icon to quantile time series graphics

@@ -108,6 +108,7 @@ def plot_quantile_map(ds, var, short_title_min, short_title_max, short_title_ave
 def plot_yearly_series(data, var, coordinate_pairs, short_title_min, short_title_max,
                        short_title_ave, ylabel, ultitle):
 
+    urtitle = 'Climaturk.com'
     for i in range(3):
 
         if i == 0:
@@ -151,6 +152,8 @@ def plot_yearly_series(data, var, coordinate_pairs, short_title_min, short_title
 
         axs[0].format(title=short_title)
         axs[0].format(ultitle=ultitle)
+        axs[0].format(urtitle=urtitle)
+        
 
         # savefig
         #storm için yeni data klasörü oluştur
