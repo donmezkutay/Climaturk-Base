@@ -63,7 +63,7 @@ def hodograph(df, coordinate_pairs, cmap, dates,):
         except:  
             print('directory exists')
 
-        plt.savefig('hodograph\{}.png'.format(sehir_id), bbox_inches='tight', dpi = 150)
+        plt.savefig('hodograph\{}.jpeg'.format(sehir_id), bbox_inches='tight', dpi = 150, optimize=True, progressive=True,)
         plt.close()
         
         os.chdir(r'D:\JupyterLab\Climaturk_Site\Codes\SkewT_Pictures')
